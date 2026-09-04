@@ -29,9 +29,5 @@ cython_debug/
 # project
 .env
 
-# environment (ignore one, use the other)
-# environment.yml
-requirements.txt
-
 # Gradescope/autograder files
 autograder
