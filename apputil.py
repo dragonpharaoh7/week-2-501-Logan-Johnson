@@ -67,6 +67,11 @@ def sort_names(names, scores):
     Returns:
     list: The names in descending order of score.
     """
+    # Coerce to arrays in case the caller passes plain lists (fancy
+    # indexing below requires an ndarray, not a Python list).
+    names = np.asarray(names)
+    scores = np.asarray(scores)
+
     # Sort the score indices ascending, then reverse for descending
     # order. Sorting by position (instead of building a name-keyed
     # dict) also means students who tie on score never overwrite one
